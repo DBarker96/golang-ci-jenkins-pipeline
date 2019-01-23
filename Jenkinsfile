@@ -5,7 +5,9 @@ pipeline {
         }
     }
     agent {
-        image 'usemtech/nodejs-mocha:latest'
+        docker {
+           image 'usemtech/nodejs-mocha:latest' 
+        }        
     }
     environment {
         CI = 'true'
