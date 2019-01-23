@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'go test'
+                sh 'go test -v'
             }
         }
         stage('Deliver') {
