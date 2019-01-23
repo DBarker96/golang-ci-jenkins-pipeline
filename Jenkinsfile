@@ -31,6 +31,9 @@ pipeline {
                     image 'usemtech/nodejs-mocha:latest'
                 }
             }
+            steps {
+                sh 'mocha'
+            }
         }
         stage('Deliver') {
             agent {
