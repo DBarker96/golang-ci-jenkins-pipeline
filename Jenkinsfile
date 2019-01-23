@@ -1,9 +1,11 @@
 pipeline {
     agent {
         docker {
-            image 'golang:1.9.2'
-            image 'usemtech/nodejs-mocha:latest'
+            image 'golang:1.9.2'            
         }
+    }
+    agent {
+        image 'usemtech/nodejs-mocha:latest'
     }
     environment {
         CI = 'true'
